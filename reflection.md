@@ -20,7 +20,7 @@ Document at least 3 bugs you found. Add rows as needed.
 | Launch the game on Normal difficulty | Eight attempts remain before any guesses | Only seven attempts remain | UI displays “Attempts left: 7” |
 | Submit `abc` | Display an error without consuming an attempt | The attempt counter increases despite invalid input | UI displays “That is not a number.” |
 | Submit a valid guess above the secret shown in Developer Debug Info | Classify the guess as too high and advise going lower | The hint incorrectly advises going higher | UI displays “Go HIGHER!” |
-
+| Win or lose, then click New Game | Start a playable fresh round | The game remains blocked because status is not reset | UI still says “You already won” or “Game over” |
 ---
 
 ## 2. How did you use AI as a teammate?
