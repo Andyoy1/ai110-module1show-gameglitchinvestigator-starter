@@ -34,7 +34,7 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        if guess > secret:
+        if guess > secret: # FIXME: A guess above the secret incorrectly tells the player to go higher, and vice versa
             return "Too High", "📈 Go HIGHER!"
         else:
             return "Too Low", "📉 Go LOWER!"
@@ -145,7 +145,7 @@ if st.session_state.status != "playing":
     st.stop()
 
 if submit:
-    st.session_state.attempts += 1
+    st.session_state.attempts += 1 # FIXME: Invalid input consumes a turn because attempts increase before input validation
 
     ok, guess_int, err = parse_guess(raw_guess)
 

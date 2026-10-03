@@ -5,8 +5,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+The game looked like a web app with simple functionality. There was also a Developer Bug Info section which makes debugging much more convenient. After running the game and testing for the first time, it was apparent that there were bugs.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+1. If you enter invalid input, it still consumes a guess.
+2. If you successfully finish a game, the new game button doesn't let you start a new one.
 
 **Bug Reproduction Log**
 
@@ -14,9 +17,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Launch the game on Normal difficulty | Eight attempts remain before any guesses | Only seven attempts remain | UI displays “Attempts left: 7” |
+| Submit `abc` | Display an error without consuming an attempt | The attempt counter increases despite invalid input | UI displays “That is not a number.” |
+| Submit a valid guess above the secret shown in Developer Debug Info | Classify the guess as too high and advise going lower | The hint incorrectly advises going higher | UI displays “Go HIGHER!” |
 
 ---
 
